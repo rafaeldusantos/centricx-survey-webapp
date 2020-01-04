@@ -1,0 +1,53 @@
+.congrat{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  color: var(--colorDash);
+  h1{
+    font-size: 45px;
+    font-weight: 600;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: center;
+    display: block;
+    margin-bottom: 0px;
+    margin-top: 0;
+  }
+  p{
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 0;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    &.pad-t-40 {
+      padding-top: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .congrat{
+    h1{
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .congrat{
+    h1{
+      font-size: 30px;
+    }
+    p{
+      font-size: 22px;
+      &.pad-t-40 {
+        padding-top: 25px;
+      }
+    }
+  }
+}

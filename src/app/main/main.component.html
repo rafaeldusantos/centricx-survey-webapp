@@ -1,0 +1,45 @@
+<header class="header">
+  <div class="logo">
+    <img src="../assets/images/logo-centricx.png" *ngIf="!logo" alt="Logo" class="mx-auto d-block" />
+    <img [src]="logo" *ngIf="logo" alt="Logo" class="mx-auto d-block" />
+  </div>
+</header>
+<div class="wrapper">
+  <div data-component="main" class="container">
+    <app-survey
+      [step]="step"
+      (changeStep)="onChangeStep($event)"
+      *ngIf="step.route == mainSteps.SURVEY.ROUTE">
+    </app-survey>
+    
+    <app-reason
+      [step]="step"
+      (changeStep)="onChangeStep($event)"
+      *ngIf="step.route == mainSteps.REASON.ROUTE">
+    </app-reason>
+    
+    <app-justify
+      [step]="step"
+      (changeStep)="onChangeStep($event)"
+      *ngIf="step.route == mainSteps.JUSTIFY.ROUTE">
+    </app-justify>
+
+    <app-thanks
+      [step]="step"
+      (changeStep)="onChangeStep($event)"
+      *ngIf="step.route == mainSteps.THANK.ROUTE">
+    </app-thanks>
+
+    <app-answered
+      [step]="step"
+      (changeStep)="onChangeStep($event)"
+      *ngIf="step.route == mainSteps.ANSWERED.ROUTE">
+    </app-answered>
+
+  </div>
+</div>
+<footer class="footer">
+  <div class="text-center">
+    <img src="../assets/images/desenv-centricx.png" class="mx-auto d-block" alt="Centricx Logotipo rodapé" />
+  </div>
+</footer>

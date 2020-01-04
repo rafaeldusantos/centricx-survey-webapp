@@ -1,0 +1,16 @@
+.header {
+  margin: 25px 0;
+  .logo{
+    img {
+      max-width: 300px;
+    }
+  }
+}
+
+.footer {
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  background-color: #f8f8f8;
+  width: 100%;
+}

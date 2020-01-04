@@ -1,0 +1,12 @@
+<div data-component="reason">
+  <div class="text in">
+      E qual o principal <strong>MOTIVO</strong>?
+  </div>
+  <div class="answers-check in">
+    <button *ngFor="let reason of reasonList;"
+      [ngStyle]="{'background-color': button.backgroundButton, 'color': button.textColor}" 
+      (click)="nextStep(reason, $event)">
+      {{ reason }}
+    </button>
+  </div>  
+</div>

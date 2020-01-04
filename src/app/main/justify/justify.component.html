@@ -1,0 +1,19 @@
+<div data-component="justify">
+  <div class="text in">
+      Gostariamos de saber mais sobre sua <strong>OPINIÃO</strong>?
+  </div>
+  <form #Form="ngForm" (submit)="nextStep()">
+    <div class="form-group">
+      <textarea 
+        [(ngModel)]="model.justify"
+        name="justify"
+        class="form-control"></textarea>
+      <div class="text-center">
+        <button
+          [ngStyle]="{'background-color': button.backgroundButton, 'color': button.textColor}">
+          Enviar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

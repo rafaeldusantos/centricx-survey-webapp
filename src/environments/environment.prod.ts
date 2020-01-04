@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrlFeedback: "https://api.centricx.com.br/feedback/feedback/"
 };

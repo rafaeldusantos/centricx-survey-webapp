@@ -1,0 +1,17 @@
+<div data-component="survey">
+  <div class="text" [innerHTML]="textReason"></div>
+  <div class="answers">
+    <button
+      *ngFor="let button of buttons;"
+      (click)="nextStep(button.number, $event)"
+      [ngStyle]="{'color': button.textColor, 'background-color': button.backgroundButton}"
+      [ngClass]="{'fontCes': typeCes}">
+        {{ button.textButton }}
+    </button>
+  </div>
+  <div class="text-bottom">
+    <span *ngFor="let item of textThermometer;">
+      {{ item }}
+    </span>
+  </div>
+</div>
