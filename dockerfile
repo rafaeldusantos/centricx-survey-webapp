@@ -1,5 +1,5 @@
 # Estagio 1 - Será responsavel em construir nossa aplicação
-FROM node:9.11.2-slim as node
+FROM node:12.14-slim as node
 WORKDIR /app
 COPY package.json /app/
 RUN rm -rf node_modules && npm cache clean --force

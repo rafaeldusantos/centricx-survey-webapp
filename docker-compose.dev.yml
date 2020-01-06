@@ -11,7 +11,7 @@ services:
     build: .
     labels:
       - traefik.backend=centricx-survey-webapp
-      - traefik.frontend.rule=Host:app-survey.centricx.com.br
+      - traefik.frontend.rule=Host:survey-dev.centricx.com.br
       - traefik.docker.network=web
       - traefik.port=80
     networks:
