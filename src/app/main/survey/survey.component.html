@@ -1,8 +1,17 @@
 <div data-component="survey">
   <div class="text" [innerHTML]="textReason"></div>
-  <div class="answers">
+  <div class="answers desktop">
     <button
-      *ngFor="let button of buttons;"
+      *ngFor="let button of buttons"
+      (click)="nextStep(button.number, $event)"
+      [ngStyle]="{'color': button.textColor, 'background-color': button.backgroundButton}"
+      [ngClass]="{'fontCes': typeCes}">
+        {{ button.textButton }}
+    </button>
+  </div>
+  <div class="answers mobile">
+    <button
+      *ngFor="let button of buttonsMobile"
       (click)="nextStep(button.number, $event)"
       [ngStyle]="{'color': button.textColor, 'background-color': button.backgroundButton}"
       [ngClass]="{'fontCes': typeCes}">

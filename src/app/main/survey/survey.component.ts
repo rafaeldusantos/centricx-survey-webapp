@@ -24,6 +24,7 @@ export class SurveyComponent extends StepController implements OnInit {
   textThermometer: Array<String>;
   buttonColor = new ButtonColor();
   buttons: Array<Buttons>;
+  buttonsMobile: Array<Buttons>;
   buttonsSettings: Buttons;
   colorButton: string;
   typeCes: Boolean = false;
@@ -52,6 +53,9 @@ export class SurveyComponent extends StepController implements OnInit {
       : this.mountText(settings.typeSurvey);
     this.textThermometer = this.mountThermometer(settings.typeSurvey);
     this.buttons = this.mountButtons(settings.button, settings.typeSurvey);
+    
+    this.buttonsMobile = this.mountButtons(settings.button, settings.typeSurvey)
+    this.buttonsMobile.sort(this.compare)
   }
 
   mountButtons(button, typeSurvey) {
@@ -123,6 +127,16 @@ export class SurveyComponent extends StepController implements OnInit {
     TweenMax.to('[data-component="survey"]', .8, { opacity: 0, ease: Power4.easeIn, onComplete: () => {
       this.changeStep.emit({step: this.step});
     }});
+  }
+
+  compare(a, b) {
+    let comparison = 0;
+    if (a.number < b.number) {
+      comparison = 1;
+    } else if (a.number > b.number) {
+      comparison = -1;
+    }
+    return comparison;
   }
 
 }

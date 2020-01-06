@@ -1,0 +1,20 @@
+version: '3.4'
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+services:
+  centricx-survey-webapp:
+    build: .
+    labels:
+      - traefik.backend=centricx-survey-webapp
+      - traefik.frontend.rule=Host:survey.centricx.com.br
+      - traefik.docker.network=web
+      - traefik.port=80
+    networks:
+      - internal
+      - web
+

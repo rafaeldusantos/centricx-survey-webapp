@@ -55,6 +55,7 @@
     font-size: 38px;
   }
   .answers-check{
+    padding: 0;
     button {
       font-size: 24px;
       padding: 12px 30px;
@@ -63,16 +64,22 @@
   }
 }
 
-@media screen and (max-width: 768px) and (orientation: landscape){
+@media screen and (max-width: 768px) {
   .text {
     font-size: 26px;
     padding: 15px 0;
   }
   .answers-check{
     button {
+      text-align: center;
       font-size: 20px;
-      padding: 7px 10px;
-      margin: 4px 1px;
+      border-radius: 5px;
+      width: 100%;
+      padding: 10px 0px;
+      margin: 4px 0;
+      &:hover {transform: scale(1.1);}
+      &:active {transform: scale(1.1);}
+      &:focus {transform: scale(1.1);}
     }
   }
 }

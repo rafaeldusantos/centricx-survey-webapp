@@ -12,7 +12,9 @@
       font-weight: bold;
   }
 }
+
 .answers{
+  &.mobile { display: none;}
   display: flex;
   justify-content: center;
   max-width: 930px;
@@ -79,23 +81,26 @@
   }
 }
 
-@media screen and (max-width: 768px) and (orientation: landscape){
+@media screen and (max-width: 768px) {
   .text{
-    font-size: 26px;
+    font-size: 22px;
   }
   .answers {
+    &.desktop { display: none;}
+    &.mobile { display: block;}
     padding-top: 20px;
     button {
-      height: 75px;
+      height: 55px;
+      width: 100%;
       &.fontCes {
         font-size: 12px;
       }
+      &:hover {transform: scale(1.1);}
+      &:active {transform: scale(1.1);}
+      &:focus {transform: scale(1.1);}
     }
   }
   .text-bottom {
-    padding-top: 10px;
-    span {
-      font-size: 15px;
-    }
+    display: none;
   }
 }

@@ -14,3 +14,9 @@
   background-color: #f8f8f8;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .footer {
+    position: relative;
+    margin-top: 25px;
+  }
+}
