@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrlFeedback: "http://localhost:3002/",
-  apiUrlAccount: "http://localhost:3000/login/",
+  apiUrlFeedback: "http://api-dev.centricx.com.br/feedback/",
+  apiUrlAccount: "http://api-dev.centricx.com.br/account/login/",
   accountUser: "centricx",
   accountPass: "teste123"
 };
