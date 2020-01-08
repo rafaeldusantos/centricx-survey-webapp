@@ -41,6 +41,10 @@ export class MainComponent implements OnInit, AfterViewInit {
     this.settingId = this.route.snapshot.queryParams["set"];
     this.organizationId = this.route.snapshot.queryParams["org"];
     this.score = this.route.snapshot.queryParams["score"];
+
+    if(this.score) {
+      localStorage.setItem('score', this.score);
+    }
   }
 
   ngOnInit() {

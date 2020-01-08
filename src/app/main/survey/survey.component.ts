@@ -42,7 +42,13 @@ export class SurveyComponent extends StepController implements OnInit {
 
   ngOnInit() {
     this.settingsToSurvey(this.settings);
-    this.show();
+    const score = localStorage.getItem('score');
+    if (score) {
+      this.nextStep(score)
+    } else {
+      this.show();
+    }
+    
   }
 
   settingsToSurvey(settings) {
@@ -107,7 +113,7 @@ export class SurveyComponent extends StepController implements OnInit {
     }
   }
 
-  nextStep(number, event) {
+  nextStep(number) {
     localStorage.setItem('colorSurveySelected', this.colorButton ? this.colorButton : this.surveyObject[number]);
     this.feedback.score = number;
     localStorage.setItem('feedback', JSON.stringify(this.feedback));

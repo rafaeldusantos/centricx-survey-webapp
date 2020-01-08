@@ -3,7 +3,7 @@
   <div class="answers desktop">
     <button
       *ngFor="let button of buttons"
-      (click)="nextStep(button.number, $event)"
+      (click)="nextStep(button.number)"
       [ngStyle]="{'color': button.textColor, 'background-color': button.backgroundButton}"
       [ngClass]="{'fontCes': typeCes}">
         {{ button.textButton }}
@@ -12,7 +12,7 @@
   <div class="answers mobile">
     <button
       *ngFor="let button of buttonsMobile"
-      (click)="nextStep(button.number, $event)"
+      (click)="nextStep(button.number)"
       [ngStyle]="{'color': button.textColor, 'background-color': button.backgroundButton}"
       [ngClass]="{'fontCes': typeCes}">
         {{ button.textButton }}
