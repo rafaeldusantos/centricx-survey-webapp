@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrlFeedback: "http://app-dev.centricx.com.br/feedback/",
-  apiUrlAccount: "http://app-dev.centricx.com.br/account/login/",
+  apiUrlFeedback: "http://api-dev.centricx.com.br/feedback/",
+  apiUrlAccount: "http://api-dev.centricx.com.br/account/login/",
   accountUser: "centricx",
   accountPass: "teste123"
 };
